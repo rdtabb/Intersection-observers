@@ -1,11 +1,14 @@
 :root {
-    --bg-main: 0, 0%, 20%;
+    --bg-main: hsl(0, 0%, 20%);
+    --fc-main: hsl(0, 0%, 100%);
 
-    --fc-main: 0, 0%, 100%;
+    --bg-reversed: hsl(0, 0%, 100%);
+    --fc-reversed: hsl(0, 0%, 20%);
 }
 
 img,
-h1 {
+h1,
+p {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -13,8 +16,8 @@ h1 {
 
 body {
     margin: 0;
-    background-color: hsl(var(--bg-main));
-    color: hsl(var(--fc-main));
+    background-color: var(--bg-main);
+    color: var(--fc-main);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,9 +28,9 @@ body {
     position: fixed;
     width: 100%;
     height: 5rem;
-    background-color: hsl(var(--fc-main));
-    color: hsl(var(--bg-main));
-    box-shadow: 1px 1px 10px hsl(var(--fc-main));
+    background-color: transparent;
+    color: var(--fc-main);
+    /* box-shadow: 1px 1px 10px var(--fc-main); */
     z-index: 1000;
 }
 
@@ -50,7 +53,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background-color: hsl(var(--bg-main));
+    background-color: var(--bg-main);
     border-radius: 1rem;
     transition: transform 200ms ease;
     transform: scaleX(0);
@@ -71,18 +74,33 @@ body {
 .nav_button {
     padding-inline: 2rem;
     padding-block: 1rem;
-    border: 1px solid hsl(var(--bg-main));
+    border: 1px solid var(--fc-main);
     border-radius: 2rem;
-    color: inherit;
+    color: var(--fc-main);
     text-decoration: none;
     text-transform: uppercase;
     transition: all 200ms ease-in-out;
 }
 
 .nav_button:hover {
-    color: hsl(var(--fc-main));
-    background-color: hsl(var(--bg-main));
-    border: 1px solid hsl(var(--bg-main));
+    color: var(--bg-main);
+    background-color: var(--fc-main);
+    border: 1px solid var(--fc-main);
+}
+
+.nav-scrolled {
+    --fc-main: black;
+    --bg-main: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--bg-main);
+    color: var(--fc-main);
+    box-shadow: 1px 1px 10px var(--fc-main);
+    z-index: 1000;
 }
 
 .section {
@@ -100,6 +118,16 @@ body {
     margin-inline: auto;
     text-align: center;
     font-size: 3rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    background-color: var(--bg-reversed);
+    color: var(--fc-reversed);
+    line-height: 1.5;
 }
 
  
