@@ -1,8 +1,24 @@
 :root {
     --bg-main: 0, 0%, 20%;
+
+    --fc-main: 0, 0%, 100%;
 }
 
 body {
     margin: 0;
     background-color: hsl(var(--bg-main));
+    color: hsl(var(--fc-main));
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(var(--fc-main));
+    color: hsl(var(--bg-main));
+}
+
+.nav_link {
+    text-transform: uppercase;
+    padding: 2rem 2rem;
 }
