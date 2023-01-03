@@ -14,6 +14,10 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5rem;
     background-color: hsl(var(--fc-main));
     color: hsl(var(--bg-main));
     box-shadow: 1px 1px 10px hsl(var(--fc-main));
@@ -21,33 +25,33 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-around;
+    gap: 8rem;
 }
 
 .nav_link {
     text-transform: uppercase;
-    padding: 2rem 2rem;
     position: relative;
-    z-index: 1;
     cursor: pointer;
 }
 
-/* .nav_link::before {
-    content: '';
-    top: 1.3rem;
-    bottom: 10px;
-    left: 10px;
+.nav_link::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: hsl(var(--bg-main));
-    transform: scale(0);
-    transition: all 300ms ease-in-out;
-    z-index: 1000;
+    border-radius: 1rem;
+    transition: transform 200ms ease;
+    transform: scaleX(0);
+    z-index: 3;
 }
 
 .nav_link:hover::before {
-    transform: scale(1);
-} */
+    transform: scaleX(1);
+}
 
 .logo {
     display: flex;
@@ -68,9 +72,7 @@ body {
 }
 
 .nav_button:hover {
-    --bg-main: 0, 0%, 100%;
-    --fc-main: 0, 0%, 20%;
-    color: hsl(var(--bg-main));
-    background-color: hsl(var(--fc-main));
-    border: 1px solid hsl(var(--fc-main));
+    color: hsl(var(--fc-main));
+    background-color: hsl(var(--bg-main));
+    border: 1px solid hsl(var(--bg-main));
 }
