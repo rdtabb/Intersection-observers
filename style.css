@@ -11,14 +11,66 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.nav {
+.header {
     display: flex;
     justify-content: space-around;
     background-color: hsl(var(--fc-main));
     color: hsl(var(--bg-main));
+    box-shadow: 1px 1px 10px hsl(var(--fc-main));
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav_link {
     text-transform: uppercase;
     padding: 2rem 2rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* .nav_link::before {
+    content: '';
+    top: 1.3rem;
+    bottom: 10px;
+    left: 10px;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(var(--bg-main));
+    transform: scale(0);
+    transition: all 300ms ease-in-out;
+    z-index: 1000;
+}
+
+.nav_link:hover::before {
+    transform: scale(1);
+} */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.nav_button {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    border: 1px solid hsl(var(--bg-main));
+    border-radius: 2rem;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out;
+}
+
+.nav_button:hover {
+    --bg-main: 0, 0%, 100%;
+    --fc-main: 0, 0%, 20%;
+    color: hsl(var(--bg-main));
+    background-color: hsl(var(--fc-main));
+    border: 1px solid hsl(var(--fc-main));
 }
