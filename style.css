@@ -4,6 +4,13 @@
     --fc-main: 0, 0%, 100%;
 }
 
+img,
+h1 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 body {
     margin: 0;
     background-color: hsl(var(--bg-main));
@@ -21,6 +28,7 @@ body {
     background-color: hsl(var(--fc-main));
     color: hsl(var(--bg-main));
     box-shadow: 1px 1px 10px hsl(var(--fc-main));
+    z-index: 1000;
 }
 
 .nav {
@@ -46,7 +54,7 @@ body {
     border-radius: 1rem;
     transition: transform 200ms ease;
     transform: scaleX(0);
-    z-index: 3;
+    z-index: 1001;
 }
 
 .nav_link:hover::before {
@@ -76,3 +84,22 @@ body {
     background-color: hsl(var(--bg-main));
     border: 1px solid hsl(var(--bg-main));
 }
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #333 url(../first-project/elric-pxl-MYRm4rbDtP8-unsplash.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+.section_header {
+    margin-inline: auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+ 
