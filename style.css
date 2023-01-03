@@ -1,0 +1,8 @@
+:root {
+    --bg-main: 0, 0%, 20%;
+}
+
+body {
+    margin: 0;
+    background-color: hsl(var(--bg-main));
+}
