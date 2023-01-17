@@ -125,14 +125,33 @@ body {
     font-size: 3rem;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    padding: 3rem 2rem;
+main {
     background-color: var(--bg-reversed);
     color: var(--fc-reversed);
+    padding-block: 7rem;
+}
+
+.main__container {
+    display: grid;
+    max-width: 80%;
+    margin-inline: auto;
+    padding: 1rem;
+    gap: 7rem;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     line-height: 1.5;
+    opacity: 0;
+    transform: translateY(5%);
+    transition: all 200ms ease-in;
+}
+
+.appear {
+    opacity: 1;
+    transform: translateY(0);
 }
 
  
